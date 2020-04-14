@@ -5,6 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    private static GameManager instance;
+
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GameManager>();
+
+            }
+            return instance;
+        }
+    }
+
+    public bool isPlayerOne = true;
     void Start()
     {
         
