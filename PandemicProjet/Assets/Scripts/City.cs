@@ -99,7 +99,7 @@ public class City : MonoBehaviour
             newCardHidden[i] = Instantiate(prefabsCardCity) as GameObject;
             newCardHidden[i].GetComponent<Button>().onClick.AddListener(() => OnReturnCardCity(tempid, ref newCardHidden));
             newCardHidden[i].transform.SetParent(canvas.transform, false);
-            newCardHidden[i].transform.position = new Vector3(canvas.transform.position.x + ((i + 3) * 20), canvas.transform.position.y, canvas.transform.position.z - 50f);
+            newCardHidden[i].transform.position = new Vector3(canvas.transform.position.x + ((i + 3) * 15), canvas.transform.position.y, canvas.transform.position.z - 50f);
 
             newCardHidden[i].GetComponentInChildren<Text>().enabled = false;
             Image[] childrenPref = newCardHidden[i].GetComponentsInChildren<Image>();

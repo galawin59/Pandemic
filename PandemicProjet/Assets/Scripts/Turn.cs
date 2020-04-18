@@ -26,7 +26,8 @@ public class Turn : MonoBehaviour
         {
             GameManager.Instance.isPlayerOne = true;
         }
-        FindObjectOfType<Dice>().ResetPosition();
         FindObjectOfType<Dice>().ChangePlayer();
+        FindObjectOfType<Dice>().ResetPosition();
+        
     }
 }
